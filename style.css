@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+body{
+    background:  #232f3a;
+}
+
+
+/* -------------------navbar-style -------------  */
+.navbar{
+    background:#1f2730;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+.search-container input , button{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.search-container input{
+    border-radius: 3px 0 0 3px;
+}
+.search-container button{
+    border-radius: 0 3px 3px 0;
+    background: rgb(107, 234, 38);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.search-container button:hover{
+    background: #3eda23;
+}
+.logo img{
+    width: 55px;
+}
+
+/* -----------Main Section style -----------  */
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block: 35px;
+}
+main section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+/* ______________________movie container------------------- */
+.movie-container{
+    display: flex;
+    justify-content: center;
+    background: #232f3a;
+    box-shadow: 0px 0px 10px #ccc;
+    color: white;
+    width: 80%;
+    border-radius: 5px;
+}
+ .noneBackground{
+    background: none;
+    box-shadow: none;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    color: white;
+}
+
+
+.movie-poster img{
+  height: 450px;
+  margin-right: 30px;
+  border-radius: 5px 0 0 5px;
+}
+.movie-info{
+    padding-inline: 15px;
+}
+
+.movie-info h2{
+    text-align: center;
+    font-size: 30px;
+    text-transform: capitalize;
+    margin: 20px 0 12px 0;
+}
+.movie-info h2+p{
+    text-align: center;
+
+}
+.movie-info .movie-genre{
+    display: flex;
+    justify-content: center;
+    margin-block: 5px;
+    overflow-x: auto;
+}
+.movie-info .movie-genre p{
+    background: #000000;
+    color: white;
+    padding: 5px 14px;
+    margin-inline: 5px;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: 800;
+}
+
+.movie-info p{
+    font-size: 18px;
+    margin-block:16px;
+    line-height: 24px;
+}
+
+/* ______________footer style___________   */
+
+footer{
+    text-align: center;
+    background: rgb(211, 199, 68);
+    color: rgb(0, 0, 0);
+    margin-top: 65px;
+    font-size: 20px;
+}
+
+
+/* ____________________mediaquery for responsive design_________________________  */
+
+@media screen and  (max-width:950px) {
+    .movie-container{
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+    }
+    .movie-poster img{
+        width: 100%;
+        height: fit-content;
+        margin-right: 0;
+    }
+    .movie-info{
+      padding-inline: 30px;
+    }
+    .movie-genre p{
+        width: fit-content;
+        height: fit-content;
+        font-size: 20px;
+    }
+}
+@media screen and  (max-width:630px){
+    .navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .search-container{
+        margin-top:12px;
+    }
+    .movie-genre p{
+        width: fit-content;
+        height: fit-content;
+        font-size: 20px;
+    }
+     .searchBtn{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 5px 67px
+        
+    }
+    .logo img{
+        display: flex;
+        align-items: center;
+        justify-content: center
+    }
+    .footer{
+        margin-top: 65px;
+    }
+    .search-container input {
+        border-radius: 8px;
+    }
+    .search-container button{
+        border-radius: 8px;
+    }
+}
